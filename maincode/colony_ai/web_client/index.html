@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colony of Minds AI - Personal Operator</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="app-container">
+        
+        <!-- Collapsible History Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-area">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                        <path d="M12 6v12M6 12h12M7.5 7.5l9 9M16.5 7.5l-9 9"/>
+                    </svg>
+                    <span class="logo-text">Colony AI</span>
+                </div>
+                <button class="icon-btn close-sidebar-btn" id="closeSidebarBtn" title="Close Sidebar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <button class="new-chat-btn" id="newChatBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                New Session
+            </button>
+            
+            <div class="history-list" id="historyList">
+                <div class="history-section-title">Recent Chats</div>
+                <div class="history-loading">Loading memory log...</div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="session-quick-stats">
+                    <div class="stat-pair">
+                        <span class="stat-lbl">Runs:</span>
+                        <span class="stat-val" id="sbTotalRuns">0</span>
+                    </div>
+                    <div class="stat-pair">
+                        <span class="stat-lbl">Avg Latency:</span>
+                        <span class="stat-val" id="sbAvgLatency">0 ms</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <!-- Header -->
+            <header class="chat-header">
+                <div class="header-left">
+                    <button class="icon-btn toggle-sidebar-btn" id="toggleSidebarBtn" title="Toggle Sidebar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div class="header-title-wrapper">
+                        <h1 class="header-title">Operator Channel</h1>
+                        <span class="header-subtitle">Deterministic micro-specialists & verification safety-gates</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <!-- Settings quick selector -->
+                    <div class="settings-trigger-wrapper">
+                        <select id="atmaModeSelector" class="settings-select" title="Atma voice synthesizer mode">
+                            <option value="template">Atma: Template Mode</option>
+                            <option value="model">Atma: Local LLM Mode</option>
+                        </select>
+                    </div>
+                    
+                    <button class="icon-btn active" id="toggleDashboardBtn" title="Toggle Performance Diagnostics">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="9"></rect>
+                            <rect x="14" y="3" width="7" height="5"></rect>
+                            <rect x="14" y="12" width="7" height="9"></rect>
+                            <rect x="3" y="16" width="7" height="5"></rect>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+            
+            <!-- Messages stream -->
+            <div class="messages-stream" id="messagesStream">
+                <div class="welcome-container">
+                    <div class="welcome-card">
+                        <div class="welcome-icon-glow">
+                            <svg class="welcome-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                <path d="M12 6v12M6 12h12M7.5 7.5l9 9M16.5 7.5l-9 9"/>
+                            </svg>
+                        </div>
+                        <h2>Colony of Minds AI</h2>
+                        <p class="welcome-desc">A composition-based operator designed to verify and speak facts, avoiding LLM hallucinations by leveraging specialized deterministic suboperators.</p>
+                        
+                        <div class="suggestions-grid">
+                            <div class="suggestion-card" onclick="useSuggestion('calculate 18% of 25000 and explain it')">
+                                <span class="sug-tag">Math & Explanations</span>
+                                <p class="sug-text">"calculate 18% of 25000 and explain it"</p>
+                            </div>
+                            <div class="suggestion-card" onclick="useSuggestion('remember my email is operator@colony.ai')">
+                                <span class="sug-tag">Durable Memory</span>
+                                <p class="sug-text">"remember my email is operator@colony.ai"</p>
+                            </div>
+                            <div class="suggestion-card" onclick="useSuggestion('what is my email?')">
+                                <span class="sug-tag">Memory Recall</span>
+                                <p class="sug-text">"what is my email?"</p>
+                            </div>
+                            <div class="suggestion-card" onclick="useSuggestion('what is the current time?')">
+                                <span class="sug-tag">Safe Tool Execution</span>
+                                <p class="sug-text">"what is the current time?"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chat input area -->
+            <footer class="input-panel">
+                <form class="chat-form" id="chatForm">
+                    <div class="input-glow-wrapper">
+                        <input type="text" id="queryInput" placeholder="Send a task or ask a question..." autocomplete="off" required>
+                        <button type="submit" class="send-btn" id="sendBtn" title="Send query">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <div class="disclaimer">Target Specs: Max 150MB RAM limit verification gates. Verifies math AST prior to responding.</div>
+            </footer>
+        </main>
+        
+        <!-- Live System Performance & Diagnostics Sidebar -->
+        <aside class="dashboard" id="dashboard">
+            <div class="dashboard-header">
+                <h2>Diagnostics Panel</h2>
+                <span class="status-indicator-live">Live</span>
+            </div>
+            
+            <div class="dashboard-body">
+                <!-- Stat Cards Grid -->
+                <div class="diag-grid">
+                    <div class="diag-card">
+                        <div class="diag-card-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Total Latency
+                        </div>
+                        <div class="diag-card-value" id="diagLatency">0.00 ms</div>
+                        <div class="diag-card-subtitle">Pipeline routing & verification</div>
+                    </div>
+                    
+                    <div class="diag-card">
+                        <div class="diag-card-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                            Process Memory (RSS)
+                        </div>
+                        <div class="diag-card-value" id="diagMemory">0.00 MB</div>
+                        <div class="diag-card-subtitle">Limit: 150 MB Target</div>
+                    </div>
+                </div>
+                
+                <!-- Verification Status -->
+                <div class="diag-section">
+                    <div class="diag-section-title">Safety Verification</div>
+                    <div class="verification-badge neutral" id="verificationBadge">
+                        No active session
+                    </div>
+                </div>
+                
+                <!-- Routed Suboperators -->
+                <div class="diag-section">
+                    <div class="diag-section-title">Routed Suboperators</div>
+                    <div class="operators-chips" id="operatorsChips">
+                        <span class="no-data-txt">No suboperators active</span>
+                    </div>
+                </div>
+                
+                <!-- Verified Facts Extracted -->
+                <div class="diag-section">
+                    <div class="diag-section-title">Verified Facts Extracted</div>
+                    <div class="facts-list" id="verifiedFactsList">
+                        <div class="no-data-txt">No verified facts recorded in this run</div>
+                    </div>
+                </div>
+                
+                <!-- Rejected Facts -->
+                <div class="diag-section">
+                    <div class="diag-section-title">Hallucination / Rejection Logs</div>
+                    <div class="facts-list rejected" id="rejectedFactsList">
+                        <div class="no-data-txt">No facts rejected in this run</div>
+                    </div>
+                </div>
+                
+                <!-- Global Stats -->
+                <div class="diag-section system-info-section">
+                    <div class="diag-section-title">Global Statistics</div>
+                    <div class="system-meta-grid">
+                        <div class="meta-row">
+                            <span>System Mode:</span>
+                            <span id="sysAtmaMode">-</span>
+                        </div>
+                        <div class="meta-row">
+                            <span>Active Model:</span>
+                            <span id="sysModelName">-</span>
+                        </div>
+                        <div class="meta-row">
+                            <span>Verification Pass Rate:</span>
+                            <span id="sysPassRate">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

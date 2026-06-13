@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colony-of-minds-ai"
+version = "0.1.0"
+description = "A low-resource AI operator framework powered by specialized micro-agents"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Jenil Saija" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "psutil>=5.9.0",
+]
+
+[project.scripts]
+colony-run = "colony_ai.run_colony:main"
+colony-cli = "colony_ai.run_cli_operator:main"
+colony-web = "colony_ai.run_web_operator:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["colony_ai*"]

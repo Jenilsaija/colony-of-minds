@@ -1,0 +1,168 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script run within a template
+#  Directory or install to clean up after an install manual
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the env is personal
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if you choose to not check in Pipfile.lock, uncomment the following line:
+#Pipfile.lock
+
+# poetry
+#   Using Poetry, it's recommended to include poetry.lock in version control.
+#   However, in case of collaboration, if you choose to not check in poetry.lock, uncomment the following line:
+#poetry.lock
+
+# pdm
+#   PDM stores project-wide configurations in .pdm.toml
+.pdm.toml
+.pdm-plugins/
+__pdm-build/
+
+# PEP 582; used by e.g. github.com/lincolnloop/layman and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# OS-specific files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor / IDE settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# Colony of Minds local files / SQLite databases
+*.db
+*.db-journal
+*.db-wal
+test_colony_memory.db
+maincode/test_colony_memory.db
+maincode/test_colony_memory_op.db
+
+# Metric and execution reports
+colony_run_metrics.jsonl
+maincode/colony_run_metrics.jsonl
+colony_evaluation_report.md
+maincode/colony_evaluation_report.md

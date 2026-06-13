@@ -1,0 +1,30 @@
+{
+  "package": "colony_of_minds_phases_2_custom_model",
+  "file_count": 21,
+  "files": [
+    "13_why_custom_model.md",
+    "14_model_architecture.md",
+    "15_tokenizer_design.md",
+    "16_training_data_strategy.md",
+    "17_low_resource_training.md",
+    "18_knowledge_distillation.md",
+    "19_preference_training.md",
+    "20_grammar_constrained_generation.md",
+    "21_continuous_learning.md",
+    "22_cpu_inference_engine.md",
+    "23_multi_domain_expertise.md",
+    "24_safety_alignment.md",
+    "25_evaluation_benchmarks.md",
+    "26_memory_augmented_inference.md",
+    "27_pruning_quantization.md",
+    "28_serving_deployment.md",
+    "29_edge_deployment.md",
+    "30_opensource_strategy.md",
+    "31_product_roadmap.md",
+    "32_master_summary_next_actions.md",
+    "README_PHASES_2.md"
+  ],
+  "created_for": "Jenil Saija",
+  "concept": "Custom AtmaCore model from scratch - no Ollama, no downloaded LLMs",
+  "_phases": "13 through 32"
+}
