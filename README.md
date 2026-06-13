@@ -2,6 +2,10 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](pyproject.toml)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
+
+> [!TIP]
+> **👋 Contributions Welcome!** We are actively looking for developers, AI researchers, and technical writers to build new suboperators, improve verifier rules, and refine our custom training loop. Check out our [**Contributing Guide**](CONTRIBUTING.md) to join the colony!
 
 A hardware-efficient, cooperative AI operator framework and custom small language model (AtmaCore) designed to run efficiently on low-resource environments (e.g., **1 GB RAM, 2-core CPU, no GPU**). 
 
