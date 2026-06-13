@@ -20,7 +20,7 @@ Only the latest release (and active development on the `main` branch) is activel
 **Do not open a public GitHub issue for security vulnerabilities.**
 
 If you discover a vulnerability, please report it privately:
-1. Email your findings to **your-email@domain.com** (replace with your contact email).
+1. Email your findings to **support@sparktac.in**.
 2. Include a detailed description of the vulnerability, the components involved (e.g., specific tool permissions, shell runners, verifier bypass), steps to reproduce, and a proof of concept (PoC) if available.
 
 We will acknowledge receipt of your report within 48 hours and work with you to analyze and resolve the issue.
