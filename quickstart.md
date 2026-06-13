@@ -10,8 +10,8 @@ Ensure you have Python 3.8+ installed, then clone the repository and install it 
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/colony-of-minds-phases.git
-cd colony-of-minds-phases/maincode
+git clone https://github.com/Jenilsaija/colony-of-minds.git
+cd colony-of-minds/maincode
 
 # Create and activate a virtual environment
 python -m venv .venv

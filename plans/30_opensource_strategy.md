@@ -78,7 +78,7 @@ Open-source core, monetize:
 
 Create a GitHub repo:
 ```
-github.com/sparktac/atmacore
+github.com/Jenilsaija/colony-of-minds
 ```
 
 Add:

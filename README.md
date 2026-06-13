@@ -130,8 +130,8 @@ Clone this repository and install it in editable mode (virtual environment recom
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/colony-of-minds-phases.git
-cd colony-of-minds-phases/maincode
+git clone https://github.com/Jenilsaija/colony-of-minds.git
+cd colony-of-minds/maincode
 
 # Create a virtual environment
 python -m venv .venv

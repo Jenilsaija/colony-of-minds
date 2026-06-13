@@ -13,7 +13,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](CO
 ## 🛠️ How Can I Contribute?
 
 ### 1. Reporting Bugs
-*   Check the [Issues](https://github.com/your-username/colony-of-minds-phases/issues) tab to see if the bug has already been reported.
+*   Check the [Issues](https://github.com/Jenilsaija/colony-of-minds/issues) tab to see if the bug has already been reported.
 *   If not, open a new issue. Describe the bug, provide steps to reproduce it, specify the OS and Python version, and paste any error logs. Use our **Bug Report Template**.
 
 ### 2. Suggesting Features & Suboperators
